@@ -1,10 +1,24 @@
-import { Hero } from '@/components/Index'
+import { CustomFilter, Hero, SearchBar } from '@/components/Index'
 import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className='overflow-hidden'>
       <Hero />
+      <div id='discover' className='mt-12 padding-x padding-y max-width'>
+        <div className='home__text-container'>
+          <h1 className='text-4xl font-extrabold'>Car Catalogue</h1>
+          <p>Explore the cars you might like</p>
+        </div>
+
+        <div className='home__filers'>
+          <SearchBar />
+          <div className='home__filter-container'>
+            <CustomFilter title='fuel' />
+            <CustomFilter title='year' />
+          </div>
+        </div>
+      </div>
     </main>
   )
 }
